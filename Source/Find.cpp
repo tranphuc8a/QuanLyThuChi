@@ -112,7 +112,7 @@ bool checkYear(string & year)
 
 bool checkDate(int d, int m, int y)
 {
-	if (!(y >= 0)) return false;
+	if (!(2001 <= y && y <= 2101)) return false;
 	if (!(1 <= m && m <= 12)) return false;
 	int maxday = Date::countDay(m, y);
 	if (!(1 <= d && d <= maxday)) return false;

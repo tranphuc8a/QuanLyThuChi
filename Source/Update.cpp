@@ -231,6 +231,7 @@ int NextPage()
 
 void setPreviousDay()
 {
+	if (today.getMonth() == 1 && today.getDay() < 11 && today.getYear() == 2001) return;
 	if (today.getDay() <= 10)
 	{
 		if (today.getMonth() == 1)
@@ -247,6 +248,7 @@ void setPreviousDay()
 
 void setNextDay()
 {
+	if (today.getMonth() == 12 && today.getDay() > 20 && today.getYear() == 2101) return;
 	if (today.getDay() >= 21)
 	{
 		if (today.getMonth() == 12)

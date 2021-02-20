@@ -105,6 +105,11 @@ int OkayForMonth()
 		return 1;
 	}
 	int m = stoi(month), y = stoi(year);
+	if (!(2001 <= y && y <= 2101))
+	{
+		renderFollowMonthMenu->addDecor("Input khong hop le!", Point(4, 10));
+		return 1;
+	}
 	MonthInfor * monthInfor = new MonthInfor(m, y);
 	Read(monthInfor);
 	
@@ -158,6 +163,11 @@ int OkayForYear()
 		return 1;
 	}
 	int y = stoi(year);
+	if (!(2001 <= y && y <= 2101))
+	{
+		renderFollowYearMenu->addDecor("Input sai!", Point(4, 10));
+		return 1;
+	}
 	vector <MonthInfor *> monthInfors(13, NULL);
 
 	for (int i = 1; i <= 12; i++)
